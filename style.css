@@ -64,7 +64,7 @@ ul {
 }
 
 .game-block {
-    width: 30%;
+    width: 22%;
     margin: 5px;
     padding: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -74,7 +74,6 @@ ul {
 }
 
 .game-block img {
-    width: 100%;
     height: auto;
     border-radius: 4px;
 }
