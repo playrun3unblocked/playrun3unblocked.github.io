@@ -64,7 +64,7 @@ ul {
 }
 
 .game-block {
-    width: 22%;
+    width: 18%;
     margin: 5px;
     padding: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -74,6 +74,7 @@ ul {
 }
 
 .game-block img {
+    width: 150px;
     height: auto;
     border-radius: 4px;
 }
@@ -92,4 +93,17 @@ ul {
 
 .game-block:hover {
     transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .game-block {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
