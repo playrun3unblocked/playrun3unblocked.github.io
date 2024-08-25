@@ -6,7 +6,7 @@ body {
     padding: 0;
     color: #333;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 h1, h2, h3 {
     color: #444;
