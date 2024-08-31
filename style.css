@@ -244,7 +244,7 @@ ul {
   height: 3px;
   background-color: #ffffff; /* Visible color for spans */
   margin: 5px 0;
-  transition: all 0.3s ease;
+  
 }
 /* Show the mobile menu button on small screens */
 @media screen and (max-width: 768px) {
