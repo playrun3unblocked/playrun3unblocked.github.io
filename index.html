@@ -111,10 +111,29 @@
 				<a href="contact.html">Contact Us</a>
 				<a href="privacy.html">Privacy Policy</a>
 				<a href="disclaimer.html">Disclaimer</a>
-				<button>Menu</button>
-			</nav>
-		</div>
-	</header>
+				<button id="menu-toggle" class="menu-btn" onclick="toggleMenu()">
+					<span></span>
+					<span></span>
+					<span></span>
+				  </button>
+				</nav>
+			  </div>
+		  
+			  <div id="mobile-menu" class="mobile-menu">
+				<span id="close-menu" class="close-btn" onclick="toggleMenu()">&times;</span>
+				<a href="index.html" class="active">Home</a>
+				<a href="about.html">About Us</a>
+				<a href="contact.html">Contact Us</a>
+				<a href="privacy.html">Privacy Policy</a>
+				<a href="disclaimer.html">Disclaimer</a>
+			  </div>
+			</header>
+			<script>
+			function toggleMenu() {
+				const mobileMenu = document.getElementById('mobile-menu');
+				mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
+			}
+		</script>
 	
 	<div class="container">
 		<!-- Main Heading -->
