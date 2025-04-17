@@ -153,6 +153,24 @@
         width: 100%;
         height: 100%;
       }
+      
+      .fullscreen-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: "Comfortaa", sans-serif;
+        z-index: 100;
+      }
+      
+      .fullscreen-btn:hover {
+        background: #45a049;
+      }
 
       @font-face {
         font-family: "Comfortaa Bold";
@@ -247,9 +265,24 @@
 
       <!-- Embedded Game Section -->
       <div id="openfl-content"></div>
+      <button id="fullscreen-btn" class="fullscreen-btn">Play Fullscreen</button>
 
       <script type="text/javascript">
         lime.embed("Run3", "openfl-content", 800, 600, { parameters: {} });
+        
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        const gameContainer = document.getElementById('openfl-content');
+        
+        fullscreenBtn.addEventListener('click', () => {
+          const gameContainer = document.getElementById('openfl-content');
+          if (gameContainer.requestFullscreen) {
+            gameContainer.requestFullscreen();
+          } else if (gameContainer.webkitRequestFullscreen) {
+            gameContainer.webkitRequestFullscreen();
+          } else if (gameContainer.msRequestFullscreen) {
+            gameContainer.msRequestFullscreen();
+          }
+        });
       </script>
 
 <p>Welcome to the ultimate destination for <strong>Run 3 Unblocked</strong>, the wildly popular endless runner game that lets you race through space tunnels without restrictions! Whether you’re a student sneaking a gaming break at school or an employee unwinding during lunch at work, our platform offers <strong>Run 3 online free</strong> with no downloads, no sign-ups, and no blocked access. Designed for seamless play on Chromebooks, laptops, desktops, and even low-spec devices, Run 3 Unblocked is your ticket to fast-paced, addictive fun.</p>
