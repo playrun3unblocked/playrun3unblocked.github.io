@@ -162,51 +162,115 @@
       </p>
       <br />
       <div class="form-container">
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="modern-form">
           <input
             type="hidden"
             name="access_key"
             value="0e1871c6-4ea7-49f7-9a9b-26607983f7c7"
           />
-          <label for="name" class="contact-label">Name:</label><br />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="contact-input"
-            required
-          /><br /><br />
+          
+          <div class="form-group">
+            <label for="name" class="contact-label">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="contact-input"
+              placeholder="Enter your name"
+              required
+              minlength="2"
+              maxlength="50"
+            />
+            <div class="error-message" id="name-error"></div>
+          </div>
 
-          <label for="email" class="contact-label">Email:</label><br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="contact-input"
-            required
-          /><br /><br />
+          <div class="form-group">
+            <label for="email" class="contact-label">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="contact-input"
+              placeholder="Enter your email"
+              required
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+            />
+            <div class="error-message" id="email-error"></div>
+          </div>
 
-          <label for="message" class="contact-label">Message:</label><br />
-          <textarea
-            id="message"
-            name="message"
-            class="contact-textarea"
-            rows="4"
-            cols="50"
-            required
-          ></textarea
-          ><br /><br />
+          <div class="form-group">
+            <label for="message" class="contact-label">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="contact-textarea"
+              placeholder="Type your message here..."
+              rows="6"
+              required
+              minlength="10"
+              maxlength="500"
+            ></textarea>
+            <div class="error-message" id="message-error"></div>
+          </div>
 
-          <button
-            type="submit"
-            value="Submit"
-            class="btn btn-primary"
-            data-type="submit"
-          >
-            Submit
-          </button>
+          <div class="form-submit">
+            <button
+              type="submit"
+              class="btn btn-primary submit-btn"
+              data-type="submit"
+            >
+              Send Message
+            </button>
+          </div>
+          
+          <div id="form-status" class="form-status"></div>
         </form>
       </div>
+      
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Clear previous errors
+          document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+          
+          // Validate form
+          let isValid = true;
+          const name = document.getElementById('name');
+          const email = document.getElementById('email');
+          const message = document.getElementById('message');
+          
+          if (!name.value.trim()) {
+            document.getElementById('name-error').textContent = 'Name is required';
+            isValid = false;
+          }
+          
+          if (!email.value.trim()) {
+            document.getElementById('email-error').textContent = 'Email is required';
+            isValid = false;
+          } else if (!email.validity.valid) {
+            document.getElementById('email-error').textContent = 'Please enter a valid email';
+            isValid = false;
+          }
+          
+          if (!message.value.trim()) {
+            document.getElementById('message-error').textContent = 'Message is required';
+            isValid = false;
+          } else if (message.value.length < 10) {
+            document.getElementById('message-error').textContent = 'Message should be at least 10 characters';
+            isValid = false;
+          }
+          
+          if (isValid) {
+            const formStatus = document.getElementById('form-status');
+            formStatus.textContent = 'Sending your message...';
+            formStatus.className = 'form-status processing';
+            
+            // Submit form if valid
+            this.submit();
+          }
+        });
+      </script>
     </div>
 
     <footer>
