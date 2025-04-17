@@ -34,10 +34,27 @@ h1, h2, h3 {
 .cta-button:hover {
     background-color: #0056b3;
 }
-
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
 ul {
     text-align: left;
     display: inline-block;
+    margin: 15px 0;
+}
+ol {
+  margin: 15px 0;
+}
+li {
+  margin-bottom: 10px;
 }
 .reviews {
     margin: 20px 0;
