@@ -1,221 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Run 3 - Play the Classic Infinite Runner Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Mobile App Optimization -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Run 3" />
 
-<head>
-	<meta charset="utf-8">
-	<title>Run 3 - Play the Classic Infinite Runner Game</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Mobile App Optimization -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="Run 3">
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Play Run 3 Unblocked for free and enjoy fast-paced, thrilling gameplay directly in your browser. No downloads, just instant fun!, Navigate through space tunnels, dodge obstacles, and challenge your reflexes!"
+    />
+    <meta
+      name="keywords"
+      content="Run 3 Online Unblocked, infinite runner game, space game, online game, browser game, free game, arcade game"
+    />
+    <meta name="robots" content="index, follow" />
 
-	<!-- SEO Meta Tags -->
-	<meta name="description"
-		content="Play Run 3 Unblocked for free and enjoy fast-paced, thrilling gameplay directly in your browser. No downloads, just instant fun!, Navigate through space tunnels, dodge obstacles, and challenge your reflexes!">
-	<meta name="keywords"
-		content="Run 3 Online Unblocked, infinite runner game, space game, online game, browser game, free game, arcade game">
-	<meta name="robots" content="index, follow">
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta
+      property="og:title"
+      content="Run 3 - Play the Classic Infinite Runner Game"
+    />
+    <meta
+      property="og:description"
+      content="Navigate through space tunnels, dodge obstacles, and challenge your reflexes in Run 3!"
+    />
+    <meta
+      property="og:image"
+      content="https://playrun3unblocked.github.io/run3-thumb.webp"
+    />
+    <meta property="og:url" content="https://playrun3unblocked.github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Run 3" />
 
-	<!-- Open Graph Tags for Social Sharing -->
-	<meta property="og:title" content="Run 3 - Play the Classic Infinite Runner Game">
-	<meta property="og:description"
-		content="Navigate through space tunnels, dodge obstacles, and challenge your reflexes in Run 3!">
-	<meta property="og:image" content="https://playrun3unblocked.github.io/playrun3online/run3-thumb.webp">
-	<meta property="og:url" content="https://playrun3unblocked.github.io/playrun3online">
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Run 3">
+    <!-- Twitter Card for Twitter Sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Run 3 - Play the Classic Infinite Runner Game"
+    />
+    <meta
+      name="twitter:description"
+      content="Navigate through space tunnels, dodge obstacles, and challenge your reflexes in Run 3!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://playrun3unblocked.github.io/run3-thumb.jpg"
+    />
+    <meta name="twitter:url" content="https://playrun3unblocked.github.io" />
 
-	<!-- Twitter Card for Twitter Sharing -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Run 3 - Play the Classic Infinite Runner Game">
-	<meta name="twitter:description"
-		content="Navigate through space tunnels, dodge obstacles, and challenge your reflexes in Run 3!">
-	<meta name="twitter:image" content="https://playrun3unblocked.github.io/playrun3online/run3-thumb.jpg">
-	<meta name="twitter:url" content="https://playrun3unblocked.github.io/playrun3online">
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://playrun3unblocked.github.io/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://playrun3unblocked.github.io/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://playrun3unblocked.github.io/apple-touch-icon.png"
+    />
 
-	<!-- Favicon -->
-	<link rel="icon" href="https://playrun3unblocked.github.io/playrun3online/favicon.png" type="image/x-icon">
-	<link rel="shortcut icon" type="image/png" href="https://playrun3unblocked.github.io/playrun3online/favicon.png">
-	<link rel="apple-touch-icon" href="https://playrun3unblocked.github.io/playrun3online/apple-touch-icon.png">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://playrun3unblocked.github.io" />
 
-	<!-- Canonical URL -->
-	<link rel="canonical" href="https://playrun3unblocked.github.io/playrun3online">
+    <!-- Schema.org Markup for Google+ -->
+    <meta
+      itemprop="name"
+      content="Run 3 - Play the Classic Infinite Runner Game"
+    />
+    <meta
+      itemprop="description"
+      content="Play Run 3, the classic infinite runner game. Navigate through space tunnels, dodge obstacles, and challenge your reflexes!"
+    />
+    <meta
+      itemprop="image"
+      content="https://playrun3unblocked.github.io/run3-thumb.webp"
+    />
 
-	<!-- Schema.org Markup for Google+ -->
-	<meta itemprop="name" content="Run 3 - Play the Classic Infinite Runner Game">
-	<meta itemprop="description"
-		content="Play Run 3, the classic infinite runner game. Navigate through space tunnels, dodge obstacles, and challenge your reflexes!">
-	<meta itemprop="image" content="https://playrun3unblocked.github.io/playrun3online/run3-thumb.webp">
+    <script type="text/javascript" src="./Run3.js"></script>
+    <script>
+      window.addEventListener(
+        "touchmove",
+        function (event) {
+          event.preventDefault();
+        },
+        { capture: false, passive: false }
+      );
+      if (
+        typeof window.devicePixelRatio != "undefined" &&
+        window.devicePixelRatio > 2
+      ) {
+        var meta = document.getElementById("viewport");
+        meta.setAttribute(
+          "content",
+          "width=device-width, initial-scale=" +
+            2 / window.devicePixelRatio +
+            ", user-scalable=no"
+        );
+      }
+    </script>
 
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
 
-	<script type="text/javascript" src="./Run3.js"></script>
-	<script>
-		window.addEventListener("touchmove", function (event) { event.preventDefault(); }, { capture: false, passive: false });
-		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
-			var meta = document.getElementById("viewport");
-			meta.setAttribute('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
-		}
-	</script>
+      #openfl-content {
+        background: #000000;
+        width: 100%;
+        height: 100%;
+      }
 
-	<style>
-		html,
-		body {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-			overflow: hidden;
-		}
+      @font-face {
+        font-family: "Comfortaa Bold";
+        src: url("font/COMFORTAA-BOLD.eot?#iefix") format("embedded-opentype"),
+          url("font/COMFORTAA-BOLD.woff") format("woff"),
+          url("font/COMFORTAA-BOLD.TTF") format("truetype"),
+          url("font/COMFORTAA-BOLD.svg#Comfortaa%20Bold") format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
 
-		#openfl-content {
-			background: #000000;
-			width: 100%;
-			height: 100%;
-		}
+      @font-face {
+        font-family: "Comfortaa";
+        src: url("font/Comfortaa.eot?#iefix") format("embedded-opentype"),
+          url("font/Comfortaa.woff") format("woff"),
+          url("font/Comfortaa.otf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
 
-		@font-face {
-			font-family: 'Comfortaa Bold';
-			src: url('font/COMFORTAA-BOLD.eot?#iefix') format('embedded-opentype'),
-				url('font/COMFORTAA-BOLD.woff') format('woff'),
-				url('font/COMFORTAA-BOLD.TTF') format('truetype'),
-				url('font/COMFORTAA-BOLD.svg#Comfortaa%20Bold') format('svg');
-			font-weight: normal;
-			font-style: normal;
-		}
+      @font-face {
+        font-family: "Permanent Marker";
+        src: url("font/PERMANENTMARKER.eot?#iefix") format("embedded-opentype"),
+          url("font/PERMANENTMARKER.woff") format("woff"),
+          url("font/PERMANENTMARKER.TTF") format("truetype"),
+          url("font/PERMANENTMARKER.svg#Permanent%20Marker") format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
 
-		@font-face {
-			font-family: 'Comfortaa';
-			src: url('font/Comfortaa.eot?#iefix') format('embedded-opentype'),
-				url('font/Comfortaa.woff') format('woff'),
-				url('font/Comfortaa.otf') format('truetype');
-			font-weight: normal;
-			font-style: normal;
-		}
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google tag (gtag.js) -->
+  </head>
 
-		@font-face {
-			font-family: 'Permanent Marker';
-			src: url('font/PERMANENTMARKER.eot?#iefix') format('embedded-opentype'),
-				url('font/PERMANENTMARKER.woff') format('woff'),
-				url('font/PERMANENTMARKER.TTF') format('truetype'),
-				url('font/PERMANENTMARKER.svg#Permanent%20Marker') format('svg');
-			font-weight: normal;
-			font-style: normal;
-		}
-	</style>
+  <body>
+    <header class="header-outer">
+      <div class="header-inner responsive-wrapper">
+        <div class="header-logo">
+          <a href="https://playrun3unblocked.github.io">
+            <img
+              src="https://playrun3unblocked.github.io/run3.png"
+              alt="Run 3 Logo"
+            />
+          </a>
+        </div>
 
-	<link rel="stylesheet" href="style.css">
-	<!-- Google tag (gtag.js) -->
+        <nav class="header-navigation">
+          <a href="https://playrun3unblocked.github.io" class="active">Home</a>
+          <a href="https://playrun3unblocked.github.io/about">About Us</a>
+          <a href="https://playrun3unblocked.github.io/contact">Contact Us</a>
+          <a href="https://playrun3unblocked.github.io/privacy"
+            >Privacy Policy</a
+          >
+          <a href="https://playrun3unblocked.github.io/disclaimer"
+            >Disclaimer</a
+          >
+          <button id="menu-toggle" class="menu-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
 
-</head>
+      <div id="mobile-menu" class="mobile-menu">
+        <span id="close-menu" class="close-btn" onclick="toggleMenu()"
+          >&times;</span
+        >
+        <a href="https://playrun3unblocked.github.io" class="active">Home</a>
+        <a href="https://playrun3unblocked.github.io/about">About Us</a>
+        <a href="https://playrun3unblocked.github.io/contact">Contact Us</a>
+        <a href="https://playrun3unblocked.github.io/privacy"
+          >Privacy Policy</a
+        >
+        <a href="https://playrun3unblocked.github.io/disclaimer">Disclaimer</a>
+      </div>
+    </header>
+    <script>
+      function toggleMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.style.display =
+          mobileMenu.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
 
-<body>
-	<header class="header-outer">
-		<div class="header-inner responsive-wrapper">
-			<div class="header-logo">
-				<a href="https://playrun3unblocked.github.io/playrun3online">
-					<img src="https://playrun3unblocked.github.io/playrun3online/run3.png" alt="Run 3 Logo" />
-				</a>
-			</div>
-			
-			<nav class="header-navigation">
-				<a href="https://playrun3unblocked.github.io/playrun3online" class="active">Home</a>
-				<a href="https://playrun3unblocked.github.io/playrun3online/about">About Us</a>
-				<a href="https://playrun3unblocked.github.io/playrun3online/contact">Contact Us</a>
-				<a href="https://playrun3unblocked.github.io/playrun3online/privacy">Privacy Policy</a>
-				<a href="https://playrun3unblocked.github.io/playrun3online/disclaimer">Disclaimer</a>
-				<button id="menu-toggle" class="menu-btn" onclick="toggleMenu()">
-					<span></span>
-					<span></span>
-					<span></span>
-				  </button>
-				</nav>
-			  </div>
-		  
-			  <div id="mobile-menu" class="mobile-menu">
-				<span id="close-menu" class="close-btn" onclick="toggleMenu()">&times;</span>
-				<a href="https://playrun3unblocked.github.io/playrun3online" class="active">Home</a>
-				<a href="https://playrun3unblocked.github.io/playrun3online/about">About Us</a>
-				<a href="https://playrun3unblocked.github.io/playrun3online/contact">Contact Us</a>
-				<a href="https://playrun3unblocked.github.io/playrun3online/privacy">Privacy Policy</a>
-				<a href="https://playrun3unblocked.github.io/playrun3online/disclaimer">Disclaimer</a>
-			  </div>
-			</header>
-			<script>
-			function toggleMenu() {
-				const mobileMenu = document.getElementById('mobile-menu');
-				mobileMenu.style.display = (mobileMenu.style.display === 'flex') ? 'none' : 'flex';
-			}
-	</script>
+    <div class="container">
+      <!-- Main Heading -->
+      <center>
+        <h1 style="font-size: 25px">Play Run 3 Unblocked Online for Free</h1>
+      </center>
 
-	<div class="container">
-	<!-- Main Heading -->
-	<center><h1 style="font-size: 25px;">Play Run 3 Unblocked Online for Free</h1></center>
+      <!-- Subheading -->
+      <center>
+        <h3>
+          Enjoy the thrilling adventures of Run 3 directly in your browser
+          without any downloads!
+        </h3>
+      </center>
 
-	<!-- Subheading -->
-	<center><h3>Enjoy the thrilling adventures of Run 3 directly in your browser without any downloads!</h3></center>
+      <!-- Embedded Game Section -->
+      <div id="openfl-content"></div>
 
+      <script type="text/javascript">
+        lime.embed("Run3", "openfl-content", 800, 600, { parameters: {} });
+      </script>
 
-	<!-- Embedded Game Section -->
-	<div id="openfl-content"></div>
+      <!-- Play Instructions -->
+      <h2>How to Play?</h2>
+      <ul>
+        <li>
+          <strong>Arrow Keys:</strong> Use the left and right arrow keys to
+          move.
+        </li>
+        <li>
+          <strong>Arrow or Spacebar:</strong> Use the up arrow or spacebar to
+          Jump and avoid obstacles.
+        </li>
+        <li>
+          <strong>Objective:</strong> Navigate your character through the
+          tunnels and avoid falling into space!
+        </li>
+      </ul>
 
-	<script type="text/javascript">
-		lime.embed("Run3", "openfl-content", 800, 600, { parameters: {} });
-	</script>
+      <!-- Game Description -->
+      <h3>About Run 3 Game</h3>
+      <p>
+        Run 3 is an addictive, fast-paced running game set in a unique and
+        challenging world. Navigate through space tunnels, avoid obstacles, and
+        strive to maintain your speed. Beloved for its simple yet challenging
+        mechanics, Run 3 offers increasingly difficult levels that captivate and
+        engage players continuously.
+      </p>
 
+      <!-- SEO Content Section -->
+      <h2>What is Run 3 Unblocked?</h2>
+      <p>
+        Run 3 Unblocked provides unrestricted access to this popular running
+        game, making it available anytime and anywhere—be it school, work, or
+        home. Dive into the action without downloads or installations and enjoy
+        seamless gameplay directly from your browser.
+      </p>
 
-	<!-- Play Instructions -->
-	<h2>How to Play?</h2>
-		<ul>
-			<li><strong>Arrow Keys:</strong> Use the left and right arrow keys to move.</li>
-			<li><strong>Arrow or Spacebar:</strong> Use the up arrow or spacebar to Jump and avoid obstacles.</li>
-			<li><strong>Objective:</strong> Navigate your character through the tunnels and avoid falling into space!</li>
-		</ul>
+      <h2>Why You’ll Love Playing Run 3</h2>
+      <p>
+        Embark on a cosmic adventure with Run 3, where you guide a small, gray
+        alien through complex space tunnels. The game combines physics-based
+        mechanics with the need for quick reflexes, creating a dynamic and
+        rewarding gaming experience. Each level ups the ante with more intricate
+        pathways, demanding precision and strategic thinking.
+      </p>
 
-	<!-- Game Description -->
-	<h3>About Run 3 Game</h3>
-		<p>Run 3 is an addictive, fast-paced running game set in a unique and challenging world. Navigate through space tunnels, avoid obstacles, and strive to maintain your speed. Beloved for its simple yet challenging mechanics, Run 3 offers increasingly difficult levels that captivate and engage players continuously.</p>
+      <h3>Advantages of Playing Run 3 Unblocked</h3>
+      <p>
+        The unblocked version of Run 3 allows you to bypass network
+        restrictions, offering uninterrupted gameplay ideal for quick breaks or
+        leisurely gaming sessions. It is optimized for smooth performance,
+        ensuring that every session is enjoyable without lag or interruptions.
+      </p>
 
-	<!-- SEO Content Section -->
-	<h2>What is Run 3 Unblocked?</h2>
-		<p>Run 3 Unblocked provides unrestricted access to this popular running game, making it available anytime and anywhere—be it school, work, or home. Dive into the action without downloads or installations and enjoy seamless gameplay directly from your browser.</p>
+      <h3>100% Safe and Free to Play</h3>
+      <p>
+        Your safety is our priority. Our website is secured, and the game is
+        free from malicious software and intrusive ads, providing a safe,
+        enjoyable gaming environment. Play Run 3 unblocked with peace of mind,
+        knowing your privacy and security are safeguarded.
+      </p>
 
-		<h2>Why You’ll Love Playing Run 3</h2>
-		<p>Embark on a cosmic adventure with Run 3, where you guide a small, gray alien through complex space tunnels. The game combines physics-based mechanics with the need for quick reflexes, creating a dynamic and rewarding gaming experience. Each level ups the ante with more intricate pathways, demanding precision and strategic thinking.</p>
+      <!-- User Engagement Section -->
+      <div class="reviews">
+        <h3>What Players Are Saying:</h3>
+        <p>
+          "Run 3 is my go-to game during study breaks! It's challenging but so
+          fun." - Alex M.
+        </p>
+        <p>
+          "I love that I can play this at school without any issues. Thanks for
+          making it available!" - Jamie L.
+        </p>
+      </div>
+    </div>
 
-		<h3>Advantages of Playing Run 3 Unblocked</h3>
-		<p>The unblocked version of Run 3 allows you to bypass network restrictions, offering uninterrupted gameplay ideal for quick breaks or leisurely gaming sessions. It is optimized for smooth performance, ensuring that every session is enjoyable without lag or interruptions.</p>
-
-		<h3>100% Safe and Free to Play</h3>
-		<p>Your safety is our priority. Our website is secured, and the game is free from malicious software and intrusive ads, providing a safe, enjoyable gaming environment. Play Run 3 unblocked with peace of mind, knowing your privacy and security are safeguarded.</p>
-
-	<!-- User Engagement Section -->
-	<div class="reviews">
-			<h3>What Players Are Saying:</h3>
-			<p>"Run 3 is my go-to game during study breaks! It's challenging but so fun." - Alex M.</p>
-			<p>"I love that I can play this at school without any issues. Thanks for making it available!" - Jamie L.</p>
-		</div>
-
-
-	</div>
-
-	<footer>
-		<div class="footer">
-		<div class="row">
-		<a href="https://www.facebook.com/sharer/sharer.php?u=https://playrun3unblocked.github.io/playrun3online" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
-		<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://playrun3unblocked.github.io/playrun3online&title=Your%20Title&summary=Your%20Description" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
-		<a href="https://twitter.com/intent/tweet?text=Check%20this%20out!&url=https://playrun3unblocked.github.io/playrun3online" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
-		<a href="https://wa.me/?text=https://playrun3unblocked.github.io/playrun3online" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i></a>
-		</div>
-		<div class="row">
-		Copyright © <script>document.write(new Date().getFullYear())</script> RUN 3 - All rights reserved || <a href="https://playrun3unblocked.github.io/playrun3online/sitemap.xml"><strong>Sitemap</strong></a> 
-		</div>
-		</div>
-		</footer>
-	<!--FONT AWESOME-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!--GOOGLE FONTS-->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
-
-</body>
-
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https://playrun3unblocked.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/shareArticle?mini=true&url=https://playrun3unblocked.github.io&title=Your%20Title&summary=Your%20Description"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/intent/tweet?text=Check%20this%20out!&url=https://playrun3unblocked.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-twitter"></i
+          ></a>
+          <a
+            href="https://wa.me/?text=https://playrun3unblocked.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa fa-whatsapp"></i
+          ></a>
+        </div>
+        <div class="row">
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          RUN 3 - All rights reserved ||
+          <a href="https://playrun3unblocked.github.io/sitemap.xml"
+            ><strong>Sitemap</strong></a
+          >
+        </div>
+      </div>
+    </footer>
+    <!--FONT AWESOME-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"
+      rel="stylesheet"
+    />
+  </body>
 </html>
