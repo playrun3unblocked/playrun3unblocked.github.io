@@ -155,16 +155,15 @@
       }
       
       .fullscreen-btn {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
+        display: block;
+        margin: 20px auto;
         padding: 10px 20px;
         background: #4CAF50;
         color: white;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        font-family: "Comfortaa", sans-serif;
+        font-family: "DM", sans-serif;
         z-index: 100;
       }
       
@@ -265,7 +264,7 @@
 
       <!-- Embedded Game Section -->
       <div id="openfl-content"></div>
-      <button id="fullscreen-btn" class="fullscreen-btn">Play Fullscreen</button>
+      <button id="fullscreen-btn" class="fullscreen-btn">Fullscreen</button>
 
       <script type="text/javascript">
         lime.embed("Run3", "openfl-content", 800, 600, { parameters: {} });
