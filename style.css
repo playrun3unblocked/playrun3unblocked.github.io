@@ -24,6 +24,14 @@ body {
     transition: all 0.3s ease;
 }
 
+/* OpenFL container specific styling */
+#openfl-content {
+    width: 900px; /* Fixed width for OpenFL container */
+    height: 675px; /* Fixed height for OpenFL container */
+    margin: 0 auto; /* Center the container */
+    position: relative;
+}
+
 .form-container {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
